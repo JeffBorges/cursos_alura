@@ -1,15 +1,11 @@
+var dbConnection = require('../infra/dbConnection');
+
 module.exports = function(app) {
   app.get('/produtos', function(req, res){
-    var mysql = require('mysql');
-    var connection = mysql.createConnection({
-      host : 'localhost',
-      user : 'root',
-      password : 'admin',
-      database : 'curso_nodejs'
-    });
+    var connection = dbConnection();
 
     connection.query('select * from livros', function(err, results) {
-      res.send(results);
+      res.render('produtos/lista', {lista: results});
     });
     connection.end();
   });
