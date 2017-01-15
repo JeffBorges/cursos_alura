@@ -3,6 +3,15 @@ var request = require('supertest')(express);
 
 describe('#ProdutosController', function(){
 
+  beforeEach(function(done) {
+    var conn = express.infra.connectionFactory();
+    conn.query('delete from livros', function(ex, result) {
+      if (!ex) {
+        done();
+      }
+    });
+  });
+
   it('#listagem json', function(done){
     request.get('/produtos')
       .set('Accept', 'application/json')
@@ -24,7 +33,7 @@ describe('#ProdutosController', function(){
 
   it('#cadastror de novo produto com dados validos', function(done) {
     request.post('/produtos')
-      .send({titulo: "tirulo", preco: 50.5, descricao: "novo livro"})
+      .send({titulo: "titulo 2", preco: 50.5, descricao: "novo livro"})
       .expect(302, done);
   });
 
