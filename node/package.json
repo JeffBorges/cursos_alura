@@ -8,7 +8,8 @@
     "supertest": "^2.0.1"
   },
   "scripts": {
-    "test": "set NODE_ENV=test&& mocha"
+    "test": "set NODE_ENV=test&& mocha",
+    "start": "node app.js"
   },
   "author": "Jefferson",
   "license": "ISC",
