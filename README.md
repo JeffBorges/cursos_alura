@@ -1,2 +1,2 @@
 # cursos_alura
-projetos criados durante os cursos que estou fazendo no site da Alura
+projetos criados com base nos exercícios dos cursos da Alura.
