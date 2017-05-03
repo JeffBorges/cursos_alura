@@ -1,4 +1,4 @@
-package br.com.desing.patterns.comportamental.strategy;
+package br.com.desing.patterns.comportamental.strategy.imposto;
 
 public class CalculadorDeImpostos {
 
