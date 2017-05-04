@@ -14,17 +14,13 @@ export default {
  data() {
    return {
      titulo: 'Alurapic',
-     fotos: [
-      {
-        url: 'http://www.farejadordecaes.com.br/wp-content/uploads/o-que-saber-antes-de-comprar-cachorro-01.png',
-        titulo: 'Cachorro',
-      },
-      {
-        url: 'http://meusanimais.com.br/wp-content/uploads/2015/03/4-gato-enfermo.jpg',
-        titulo: 'Gato',
-      },
-    ]
+     fotos: [],
    }
+ },
+ created() {
+   this.$http.get('http://localhost:3000/v1/fotos')
+    .then(res => res.json())
+    .then(fotos => this.fotos = fotos, err => console.log(err));
  }
 }
 </script>
