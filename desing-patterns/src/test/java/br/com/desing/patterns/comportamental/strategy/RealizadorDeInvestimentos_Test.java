@@ -1,5 +1,6 @@
 package br.com.desing.patterns.comportamental.strategy;
 
+import br.com.desing.patterns.beans.Conta;
 import br.com.desing.patterns.comportamental.strategy.investimento.*;
 import org.junit.Assert;
 import org.junit.Test;

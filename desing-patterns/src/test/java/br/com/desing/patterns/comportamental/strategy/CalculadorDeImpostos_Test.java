@@ -1,5 +1,6 @@
 package br.com.desing.patterns.comportamental.strategy;
 
+import br.com.desing.patterns.beans.Orcamento;
 import br.com.desing.patterns.comportamental.strategy.imposto.*;
 import org.junit.Assert;
 import org.junit.Test;

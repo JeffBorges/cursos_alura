@@ -1,5 +1,7 @@
 package br.com.desing.patterns.comportamental.strategy.investimento;
 
+import br.com.desing.patterns.beans.Conta;
+
 public class RealizadorDeInvestimentos {
 
     public void realizaInvestimento(Conta conta, Investimento investimento) {

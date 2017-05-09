@@ -1,4 +1,4 @@
-package br.com.desing.patterns.comportamental.strategy.investimento;
+package br.com.desing.patterns.beans;
 
 public class Conta {
 
