@@ -12,7 +12,7 @@ public class CalculadorDeImpostos_Test {
         Imposto imposto = new ICMS();
         Orcamento orcamento = new Orcamento(500.0);
         double valorComImposto = new CalculadorDeImpostos().calcular(orcamento, imposto);
-        Assert.assertTrue(valorComImposto == imposto.calcular(orcamento.getValor()));
+        Assert.assertTrue(valorComImposto == imposto.calcular(orcamento));
     }
 
     @Test
@@ -20,7 +20,7 @@ public class CalculadorDeImpostos_Test {
         Imposto imposto = new ISS();
         Orcamento orcamento = new Orcamento(500.0);
         double valorComImposto = new CalculadorDeImpostos().calcular(orcamento, imposto);
-        Assert.assertTrue(valorComImposto == imposto.calcular(orcamento.getValor()));
+        Assert.assertTrue(valorComImposto == imposto.calcular(orcamento));
     }
 
 
@@ -29,7 +29,7 @@ public class CalculadorDeImpostos_Test {
         Imposto imposto = new ICCC();
         Orcamento orcamento = new Orcamento(3500.0);
         double valorComImposto = new CalculadorDeImpostos().calcular(orcamento, imposto);
-        Assert.assertTrue(valorComImposto == imposto.calcular(orcamento.getValor()));
+        Assert.assertTrue(valorComImposto == imposto.calcular(orcamento));
     }
 
 }
