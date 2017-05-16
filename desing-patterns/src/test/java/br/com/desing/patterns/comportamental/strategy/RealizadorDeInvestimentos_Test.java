@@ -1,6 +1,7 @@
 package br.com.desing.patterns.comportamental.strategy;
 
 import br.com.desing.patterns.beans.Conta;
+import br.com.desing.patterns.beans.Pessoa;
 import br.com.desing.patterns.comportamental.strategy.investimento.*;
 import org.junit.Assert;
 import org.junit.Test;
@@ -9,7 +10,7 @@ public class RealizadorDeInvestimentos_Test {
 
     @Test
     public void realizaInvestimento_Conservador_Test() {
-        Conta conta = new Conta(1000.0);
+        Conta conta = new Conta(1000.0, new Pessoa("João"));
         Investimento investimento = new Conservador();
         new RealizadorDeInvestimentos().realizaInvestimento(conta, investimento);
         double lucro = conta.getSaldo() - 1000;
@@ -19,7 +20,7 @@ public class RealizadorDeInvestimentos_Test {
 
     @Test
     public void realizaInvestimento_Moderado_Test() {
-        Conta conta = new Conta(1000.0);
+        Conta conta = new Conta(1000.0, new Pessoa("João"));
         Investimento investimento = new Moderado();
         new RealizadorDeInvestimentos().realizaInvestimento(conta, investimento);
         double lucro = conta.getSaldo() - 1000;
@@ -30,7 +31,7 @@ public class RealizadorDeInvestimentos_Test {
 
     @Test
     public void realizaInvestimento_Arrojado_Test() {
-        Conta conta = new Conta(1000.0);
+        Conta conta = new Conta(1000.0, new Pessoa("João"));
         Investimento investimento = new Arrojado();
         new RealizadorDeInvestimentos().realizaInvestimento(conta, investimento);
         double lucro = conta.getSaldo() - 1000;
