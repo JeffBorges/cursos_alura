@@ -14,7 +14,7 @@ public class RespostaCSV extends Resposta {
 		if (Formato.CSV.equals(req.getFormato())) {
 			System.out.println(String.format("%s;%.2f", conta.getTitular().getNome(), conta.getSaldo()));
 		} else {
-			proximo.responde(req, conta);			
+			proximo.ifPresent(p -> p.responde(req, conta));			
 		}
 	}
 

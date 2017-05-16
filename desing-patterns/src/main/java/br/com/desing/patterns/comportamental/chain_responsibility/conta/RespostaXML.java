@@ -15,7 +15,7 @@ public class RespostaXML extends Resposta {
 			System.out.println(String.format("<conta><titular>%s/titular><saldo>%.2f</saldo></conta>",
 					conta.getTitular().getNome(), conta.getSaldo()));
 		} else {
-			proximo.responde(req, conta);
+			proximo.ifPresent(p -> p.responde(req, conta));	
 		}
 	}
 

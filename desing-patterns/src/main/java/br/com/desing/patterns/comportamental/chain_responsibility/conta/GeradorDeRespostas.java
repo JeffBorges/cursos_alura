@@ -5,8 +5,7 @@ import br.com.desing.patterns.beans.Conta;
 public class GeradorDeRespostas {
 
 	public void gerar(Requisicao req, Conta conta) {
-		Resposta r4 = new SemResposta();
-		Resposta r3 = new RespostaXML(r4);
+		Resposta r3 = new RespostaXML(null);
 		Resposta r2 = new RespostaPorcento(r3);
 		Resposta r1 = new RespostaCSV(r2);
 		
