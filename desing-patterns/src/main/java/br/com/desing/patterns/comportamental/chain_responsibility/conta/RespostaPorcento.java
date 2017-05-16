@@ -3,9 +3,11 @@ package br.com.desing.patterns.comportamental.chain_responsibility.conta;
 import br.com.desing.patterns.beans.Conta;
 import br.com.desing.patterns.comportamental.chain_responsibility.conta.Requisicao.Formato;
 
-public class RespostaPorcento implements Resposta{
+public class RespostaPorcento extends Resposta{
 
-	private Resposta proximo;
+	public RespostaPorcento(Resposta proximo) {
+		super(proximo);
+	}
 
 	@Override
 	public void responde(Requisicao req, Conta conta) {
@@ -14,11 +16,6 @@ public class RespostaPorcento implements Resposta{
 		} else {
 			proximo.responde(req, conta);			
 		}
-	}
-
-	@Override
-	public void setProxima(Resposta proximo) {
-		this.proximo = proximo;
 	}
 	
 }
