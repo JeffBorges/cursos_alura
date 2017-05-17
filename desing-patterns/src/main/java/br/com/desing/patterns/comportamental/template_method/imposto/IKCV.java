@@ -3,7 +3,7 @@ package br.com.desing.patterns.comportamental.template_method.imposto;
 import br.com.desing.patterns.beans.Item;
 import br.com.desing.patterns.beans.Orcamento;
 
-public class ImpostoY extends TemplateImpostoCondicional {
+public class IKCV extends TemplateImpostoCondicional {
 
 	@Override
 	protected double minimaTaxacao(Orcamento orcamento) {

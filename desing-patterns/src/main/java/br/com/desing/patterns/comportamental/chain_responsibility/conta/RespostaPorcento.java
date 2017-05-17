@@ -14,7 +14,7 @@ public class RespostaPorcento extends Resposta{
 		if (Formato.PORCENTO.equals(req.getFormato())) {
 			System.out.println(String.format("%s%%%.2f", conta.getTitular().getNome(), conta.getSaldo()));
 		} else {
-			proximo.ifPresent(p -> p.responde(req, conta));				
+			proximo.ifPresent(p -> p.responde(req, conta));
 		}
 	}
 	
